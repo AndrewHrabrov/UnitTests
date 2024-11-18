@@ -69,9 +69,9 @@ SUITE(encrypt) {
     }
     
     TEST_FIXTURE(KeyThree_fixture, StringWithDigits) {
-        std::wstring wstr = p->encrypt(L"АМГ68");
+        std::wstring wstr = p->encrypt(L"АМ6");
         std::string str = converter.to_bytes(wstr);
-        CHECK_EQUAL("Г М8А6", str);
+        CHECK_EQUAL("6МА", str);
     }
     
     TEST_FIXTURE(KeyThree_fixture, EmptyString) {
